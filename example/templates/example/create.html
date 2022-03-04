@@ -1,0 +1,21 @@
+{% extends 'example/base.html' %}
+
+{% block content %}
+<form action="." method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+
+    <!-- Customize your form warnings as you wish -->
+    {% if form.warnings %}
+        <div class="rounded p-2 mt-2 bg-warning">
+            <ul>
+            {% for warning in form.warnings %}
+                <li><b>{{ warning.message }}:</b> {{ warning.description }}</li>
+            {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+    <!-- End of form warnings -->
+</form>
+{% endblock %}

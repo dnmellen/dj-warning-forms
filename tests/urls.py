@@ -1,10 +1,12 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals, absolute_import
 
-from django.conf.urls import url, include
+from django.urls import path
 from django.contrib import admin
+from example.views import PollCreateView, PollListView
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^', include('dj_warning_forms.urls', namespace='dj_warning_forms')),
+    path("admin/", admin.site.urls),
+    path("list/", PollListView.as_view(), name="list"),
+    path("", PollCreateView.as_view(), name="create"),
 ]

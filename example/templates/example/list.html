@@ -1,0 +1,12 @@
+{% extends 'example/base.html' %}
+
+{% block content %}
+<ul>
+    {% for poll in object_list %}
+        <li><b>{{ poll.question }}:</b> {{ poll.pub_date }}</li>
+    {% endfor %}
+</ul>
+<div>
+    <a href="{% url 'create' %}" class="btn btn-primary">Add new poll</a>
+</div>
+{% endblock %}
