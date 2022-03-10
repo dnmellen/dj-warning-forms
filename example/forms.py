@@ -1,10 +1,14 @@
-from django.forms import ModelForm
+from django import forms
 from dj_warning_forms.forms import WarningFormMixin, FormFieldWarning
 
 from .models import Poll
 
 
-class PollForm(WarningFormMixin, ModelForm):
+class PollForm(WarningFormMixin, forms.ModelForm):
+    question = forms.CharField(
+        max_length=200, widget=forms.TextInput(attrs={"autocomplete": "off"})
+    )
+
     class Meta:
         model = Poll
         fields = "__all__"

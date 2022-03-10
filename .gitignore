@@ -35,6 +35,7 @@ htmlcov
 .mr.developer.cfg
 .project
 .pydevproject
+.vscode
 
 # Pycharm/Intellij
 .idea
