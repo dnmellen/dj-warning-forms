@@ -13,6 +13,8 @@ Django Warning Forms
 
 Add warnings to your Django Forms easily
 
+.. image:: https://github.com/dnmellen/dj-warning-forms/blob/master/docs/demo.gif?raw=true
+
 Documentation
 -------------
 
@@ -26,7 +28,7 @@ Install Django Warning Forms::
     pip install dj-warning-forms
 
 Use the form mixin in any form
-================================
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: python
 
@@ -55,13 +57,13 @@ Use the form mixin in any form
                 ]
             return []
 
-Adding a warning is as simple as adding a method with the "warning_" prefix. This method must return a
+Adding a warning is as simple as adding a method with the ``warning_`` prefix. This method must return a
 list of FormFieldWarning objects.
 
 Showing warnings in the template
-================================
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-You can find the list of warnings in `form.warnings`.
+You can find the list of warnings in ``form.warnings``.
 
 .. code-block:: html
 
