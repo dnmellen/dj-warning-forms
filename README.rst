@@ -2,14 +2,13 @@
 Django Warning Forms
 =============================
 
-.. image:: https://badge.fury.io/py/dj-warning-forms.svg
-    :target: https://badge.fury.io/py/dj-warning-forms
+|PyPI| |Build| |coverage|
 
-.. image:: https://travis-ci.org/dnmellen/dj-warning-forms.svg?branch=master
-    :target: https://travis-ci.org/dnmellen/dj-warning-forms
+.. |PyPI| image:: https://img.shields.io/pypi/v/dj-warning-forms
 
-.. image:: https://codecov.io/gh/dnmellen/dj-warning-forms/branch/master/graph/badge.svg
-    :target: https://codecov.io/gh/dnmellen/dj-warning-forms
+.. |Build| image:: https://img.shields.io/github/workflow/status/dnmellen/dj-warning-forms/Python%20package
+
+.. |coverage| image:: https://img.shields.io/codecov/c/gh/dnmellen/dj-warning-forms
 
 Add warnings to your Django Forms easily
 
