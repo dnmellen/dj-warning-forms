@@ -44,6 +44,16 @@ def coverage(c):
 
 
 @task
+def coverage_script(c):
+    """
+    check code coverage quickly with the default Python
+    """
+    c.run("coverage run runtests.py tests")
+    c.run("coverage report -m")
+    c.run("coverage html")
+
+
+@task
 def docs(c):
     """
     Build the documentation and open it in the browser

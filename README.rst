@@ -2,11 +2,11 @@
 Django Warning Forms
 =============================
 
-|PyPI| |Build| |coverage|
+|PyPI| |coverage|
 
 .. |PyPI| image:: https://img.shields.io/pypi/v/dj-warning-forms
 
-.. |Build| image:: https://img.shields.io/github/workflow/status/dnmellen/dj-warning-forms/Python%20package
+[![Django Warning Forms Tests](https://github.com/dnmellen/dj-warning-forms/actions/workflows/python-package.yml/badge.svg?branch=master)](https://github.com/dnmellen/dj-warning-forms/actions/workflows/python-package.yml)
 
 .. |coverage| image:: https://img.shields.io/codecov/c/gh/dnmellen/dj-warning-forms
 

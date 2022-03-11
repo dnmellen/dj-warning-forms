@@ -36,6 +36,8 @@ jobs:
       run: flake8
     - name: Test with tox
       run: tox -v
+    - name: Coverage
+      run: invoke coverage_script
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v2
       with:
