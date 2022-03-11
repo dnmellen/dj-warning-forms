@@ -39,7 +39,7 @@ def coverage(c):
     """
     c.run("coverage run runtests.py tests")
     c.run("coverage report -m")
-    c.run("coverage html")
+    c.run("coverage xml")
 
 
 @task
