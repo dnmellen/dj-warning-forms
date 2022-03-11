@@ -37,7 +37,7 @@ def coverage(c):
     """
     check code coverage quickly with the default Python
     """
-    c.run("coverage run runtests.py tests")
+    c.run("coverage run --source dj_warning_forms runtests.py tests")
     c.run("coverage report -m")
     c.run("coverage xml")
 

@@ -10,7 +10,7 @@ Tests for `dj-warning-forms` models module.
 
 from django.http.request import QueryDict
 from django.test import TestCase
-from example.forms import PollForm
+from example.forms import PollForm, PollNoWarningsForm
 
 
 class TestDjangoWarningForms(TestCase):
@@ -35,6 +35,10 @@ class TestDjangoWarningForms(TestCase):
             warning_dict,
             form.warnings,
         )
+
+    def test_render_no_warning_form(self):
+        form = PollNoWarningsForm(data=QueryDict("question=What is your favorite color"))
+        self.assertTrue(form.is_valid())
 
     def test_check_is_valid_after_warning(self):
         form = PollForm(data=QueryDict("question=What is your favorite color&ignore_warnings=true"))

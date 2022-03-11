@@ -22,3 +22,13 @@ class PollForm(WarningFormMixin, forms.ModelForm):
                 )
             ]
         return []
+
+
+class PollNoWarningsForm(WarningFormMixin, forms.ModelForm):
+    question = forms.CharField(
+        max_length=200, widget=forms.TextInput(attrs={"autocomplete": "off"})
+    )
+
+    class Meta:
+        model = Poll
+        fields = "__all__"

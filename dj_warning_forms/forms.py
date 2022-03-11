@@ -22,6 +22,7 @@ class WarningFormMixin:
         self.warnings = []
 
     def get_warnings(self):
+        self.warnings = []
         if self.cleaned_data.get("ignore_warnings"):
             return []
         else:
