@@ -35,3 +35,7 @@ class TestDjangoWarningForms(TestCase):
             warning_dict,
             form.warnings,
         )
+
+    def test_check_is_valid_after_warning(self):
+        form = PollForm(data=QueryDict("question=What is your favorite color&ignore_warnings=true"))
+        self.assertTrue(form.is_valid())
