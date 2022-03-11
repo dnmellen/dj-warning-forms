@@ -40,17 +40,17 @@ def coverage(c):
     c.run("coverage run runtests.py tests")
     c.run("coverage report -m")
     c.run("coverage html")
-    c.run("open htmlcov/index.html")
 
 
 @task
-def coverage_script(c):
+def opencoverage(c):
     """
     check code coverage quickly with the default Python
     """
     c.run("coverage run runtests.py tests")
     c.run("coverage report -m")
     c.run("coverage html")
+    c.run("open htmlcov/index.html")
 
 
 @task
